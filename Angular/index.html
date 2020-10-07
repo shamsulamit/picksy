@@ -2,28 +2,25 @@
 <html ng-app="todoApp">
 <head>
 <meta charset="utf-8">
-<title>My Todo List</title>
+<title>My Playlist</title>
 
-<link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet"> 
-<script src="angular.min.js"></script>
-<script src="main.js"></script>
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
 
 </head>
 
 <body>
-<div ng-controller="todoCont as root">
- <span><span class="number">{{root.remaining()}}</span> of <span class="number">{{root.todo.length}}</span> remaining</span>
-  
-  <form ng-submit="root.add()">
-   <input type="text" ng-model="root.txtTask" />
-   <input type="submit"  name="btnSubmit" value="Add" />
-  </form>
-  <div class="result" ng-repeat="item in root.todo">
-    <input class="data" id="{{item.task}}" type="checkbox" ng-model="item.done"><label for="{{item.task}}"><span class="done-{{item.done}}"> {{item.task}}</span></label>
+	
+<div class="container">
+<div class="col-md-4 col-sm-6">
+		<video src="https://www.youtube.com/watch?v=Oruba7-Uxkk"></video>
+</div>
 
-  </div><!--end ng-repeat -->
-	<a href="" ng-click="root.remove()">Remove</a>
-</div><!--end controller-->
+</div>
+	
+	
+	
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
