@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app="todoApp">
+<head>
+<meta charset="utf-8">
+<title>My Todo List</title>
+
+<link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet"> 
+<script src="angular.min.js"></script>
+<script src="main.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+<div ng-controller="todoCont as root">
+ <span><span class="number">{{root.remaining()}}</span> of <span class="number">{{root.todo.length}}</span> remaining</span>
+  
+  <form ng-submit="root.add()">
+   <input type="text" ng-model="root.txtTask" />
+   <input type="submit"  name="btnSubmit" value="Add" />
+  </form>
+  <div class="result" ng-repeat="item in root.todo">
+    <input class="data" id="{{item.task}}" type="checkbox" ng-model="item.done"><label for="{{item.task}}"><span class="done-{{item.done}}"> {{item.task}}</span></label>
+
+  </div><!--end ng-repeat -->
+	<a href="" ng-click="root.remove()">Remove</a>
+</div><!--end controller-->
+</body>
+</html>
